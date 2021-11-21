@@ -9,7 +9,9 @@ public class Dollar {
          return new Dollar(amount * multiplier);
        }
        public boolean equals(Object obj){
-           Dollar dollar=(Dollar)obj;
-           return  this.amount == dollar.amount;
+           if (getClass() != obj.getClass())
+               return false;
+              Dollar dollar=(Dollar)obj;
+              return this.amount == dollar.amount;
        }
 }
